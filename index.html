@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+  <html lang="en">
+
+	<head>			
+	   <meta charset="utf-8">
+	   <title></title>
+		 	
+		 		<!--ADD LINKS (JAVASCRIPT,CSS,BOOTSTRAP,ETC.)-->
+
+		 		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+			<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		
+
+		<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		
+		<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+
+
+	
+		 
+	</head>
+
+	<body>
+				
+	    <div class= "jumbotron">
+			<div clas="header">
+				<h1>Train <em>Tracking</em> System</h1>
+			</div>
+		</div>
+
+		<div class="container">
+					
+			<div class="panel">
+
+
+				<table class="table">
+					<th class="trainName">Train Name</th>
+					<th class="destination">Destination</th>
+					<th class="frequency">Frequency (mins.)</th>
+					<th class="nextArrival">Next Arrival</th>
+					<th class="minutesAway">Minutes Away</th>
+					
+					<tbody class="tableBody">
+
+					</tbody>
+				</table>
+
+			</div><!--closing panel-->
+
+			<div class="panel">
+				<div class="panel-heading">
+					<h4> Add Train</h4>
+				</div>
+
+				<br>
+
+				<form>
+					<div class="form-group">
+					  <label for="newTrainName">Train Name</label>
+					  <input type="input" class="form-control" id="newTrainName" placeholder="HTML Express">
+					</div>
+
+					<div class="form-group">
+					   <label for="newDestination">Destination</label>
+					   <input type="input" class="form-control" id="newDestination" placeholder="Success">
+					</div>
+
+					<div class="form-group">
+					    <label for="firstTrainTime">First Train Time</label>
+					    <input type="input" class="form-control" id="firstTrainTime" placeholder="eg: 8:00 AM">
+					  </div>
+
+					  <div class="form-group">
+					    <label for="frequency">Frequency</label>
+					    <input type="input" class="form-control" id="frequency" placeholder="mins.">
+					  </div>
+
+					  
+					  
+					  
+					  <button type="submit" class="btn btn-default">Submit</button>
+					</form>
+
+
+
+			</div><!--closing 2nd panel-->
+
+
+		</div><!--Closing container
+
+
+
+
+
+			
+			
+
+				<!--ONLY USE <STYLE> TAGS IF YOU DON'T HAVE A SEPERATE STYLE.CSS FILE-->
+		<style type="text/css">
+
+				
+			.jumbotron {
+				text-align:center;
+				background:black;
+				color:lightgrey;
+			}
+
+
+				
+
+			.container {
+				width:850px;
+
+			}
+
+			h4 {
+				margin:auto;
+			}
+
+			.panel {
+				border-color:black;
+				padding:10px;
+
+			}
+			.panel-heading{
+				border-radius: 10px;
+				height:40px;
+				background-color:black;
+				color:lightgrey;
+				width:100%;
+				text-align: center;
+
+			}
+
+			th {
+				background:black;
+				color:lightgrey;
+				height:20px;
+				border-radius:5px;
+				text-align:center;
+			}
+
+			td {
+				text-align:center;
+			}
+
+			.btn {
+				background:black;
+				color:lightgrey;
+			}
+
+
+		</style>
+
+		<script type="text/javascript">
+			
+			
+			  // Initialize Firebase
+			  var config = {
+			    apiKey: "AIzaSyB5gA9HMbWk5b_-ERikA9ZEwFidI_TBnZE",
+			    authDomain: "train-tracking-8330f.firebaseapp.com",
+			    databaseURL: "https://train-tracking-8330f.firebaseio.com",
+			    projectId: "train-tracking-8330f",
+			    storageBucket: "train-tracking-8330f.appspot.com",
+			    messagingSenderId: "931663036544"
+			  };
+			  firebase.initializeApp(config);
+
+			    var database = firebase.database();
+
+
+			    var frequency;
+				var trainName;
+				var firstTrain;
+				var trainTime;
+				var minutesAway;
+				var destination;
+			
+		</script>
+
+
+		</body>
+
+	</html>
